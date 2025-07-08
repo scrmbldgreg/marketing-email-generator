@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Marketing Email Generator</title>
+        <link rel="icon" type="image/x-icon" href="assets/meg_icon.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+            <div class="container px-5">
+                <a class="navbar-brand fw-bold" href="#page-top"><img class="invert-on-dark" src="assets/meg_icon.png" style="height: 30px; padding: 0 5px 5px 0;"/>Marketing Email Generator</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#build">Build an Email</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#generate">Generate Snippets</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#comingSoon">Coming Soon</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Mashead header-->
+        <header class="masthead">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <!-- Mashead text and app badges-->
+                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                            <h2 class="display-1 lh-1 mb-3">Simplify Building Emails</h1>
+                            <p class="lead fw-normal text-muted mb-5">Create marketing emails faster with ready-made templates and code snippets. Easily generate custom emails using HTML and AMPscript—no advanced coding required.</p>
+                            <div class="d-flex flex-column flex-lg-row align-items-center">
+                                <button class="btn btn-outline-dark rounded-pill btn-lg w-10" data-bs-toggle="modal" data-bs-target="#emailModal">
+                                    <span class="d-flex align-items-center">
+                                        <span class="medium">Start building</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- Masthead device mockup feature-->
+                        <div class="masthead-device-mockup">
+                            <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                                        <stop class="gradient-start-color" offset="0%"></stop>
+                                        <stop class="gradient-end-color" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="50"></circle></svg
+                            ><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
+                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg
+                            ><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
+                            <div class="device-wrapper">
+                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                                    <div class="screen bg-black">
+                                        <!-- PUT CONTENTS HERE:-->
+                                        <!-- * * This can be a video, image, or just about anything else.-->
+                                        <!-- * * Set the max width of your media to 100% and the height to-->
+                                        <!-- * * 100% like the demo example below.-->
+                                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/demo-screen.mp4" type="video/mp4" /></video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Quote/testimonial aside-->
+            <aside id="build" class="text-center bg-gradient-primary-to-secondary">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-xl-8">
+                            <div class="h2 fs-1 text-white mb-4">Create emails in seconds...</div>
+                                <button class="btn btn-primary rounded-pill btn-lg w-10" data-bs-toggle="modal" data-bs-target="#emailModal">
+                                    <span class="d-flex align-items-center">
+                                        <!-- <i class="bi-chat-text-fill me-2"></i> -->
+                                        <span class="medium">Build Yours Now</span>
+                                    </span>
+                                </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        <!-- App features section-->
+        <section class="masthead" id="generate">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                        <div class="container-fluid px-5">
+                            <!-- Feature Row -->
+                            <div class="row gx-5">
+                                <div class="col-md-6 mb-5 btn">
+                                    <!-- Feature item with modal trigger -->
+                                    <div class="text-center" data-bs-toggle="modal" data-bs-target="#modalEmailBanner">
+                                        <i class="bi-image icon-feature text-gradient d-block mb-3 "></i>
+                                        <h3 class="font-alt">Email Banner</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-5 btn">
+                                    <div class="text-center" data-bs-toggle="modal" data-bs-target="#modalEmailCopy">
+                                        <i class="bi-card-text icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Email Copy</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-5">
+                                <div class="col-md-6 mb-5 btn">
+                                    <div class="text-center" data-bs-toggle="modal" data-bs-target="#modalBulletList">
+                                        <i class="bi-list-task icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Bullet List</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-5 btn">
+                                    <div class="text-center" data-bs-toggle="modal" data-bs-target="#modalTestimonials">
+                                        <i class="bi-blockquote-left icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Testimonials</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-5 btn">
+                                    <div class="text-center" data-bs-toggle="modal" data-bs-target="#modalCTAButton">
+                                        <i class="bi-link icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">CTA Button</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-5 btn">
+                                    <div class="text-center" data-bs-toggle="modal" data-bs-target="#modalLinkedText">
+                                        <i class="bi-at icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Linked Text</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-0">
+                        <!-- Features section device mockup-->
+                        <div class="features-device-mockup">
+                            <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                                        <stop class="gradient-start-color" offset="0%"></stop>
+                                        <stop class="gradient-end-color" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="50"></circle></svg
+                            ><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
+                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg
+                            ><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
+                            <div class="device-wrapper">
+                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                                    <div class="screen bg-black">
+                                        <!-- PUT CONTENTS HERE:-->
+                                        <!-- * * This can be a video, image, or just about anything else.-->
+                                        <!-- * * Set the max width of your media to 100% and the height to-->
+                                        <!-- * * 100% like the demo example below.-->
+                                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/demo-screen.mp4" type="video/mp4" /></video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to action section-->
+        <section class="cta" id="comingSoon">
+            <div class="cta-content">
+                <div class="container px-5">
+                    <h2 class="text-white display-1 lh-1 mb-4">
+                        Coming soon...
+                    </h2>
+                    <ul class="mb-4">
+                        <li class="text-white bold">Tolley Email Generator</li>
+                        <li class="text-white bold">Two-column Layout</li>
+                        <li class="text-white bold">Three-column Layout</li>
+                        <li class="text-white bold">Icon list</li>
+                    </ul>
+                                <button class="btn btn-outline-light-2 rounded-pill btn-lg w-10" data-bs-toggle="modal" data-bs-target="#buyUsCoffee">
+                                    <span class="d-flex align-items-center">
+                                        <!-- <i class="bi-chat-text-fill me-2"></i> -->
+                                        <span class="medium">LEAVE A TIP!</span>
+                                    </span>
+                                </button>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-black text-center py-5">
+            <div class="container px-5">
+                <div class="text-white-50 medium">
+                    <div class="mb-2">For MKT Internal Use Only.</div>
+                </div>
+                <div class="text-white-50 small">
+                    <div class="mx-1">&copy; Marketing Email Generator 2025. All Rights Reserved.</div>
+                    <div class="mx-1">MEGv1.2</div>
+                </div>
+            </div>
+        </footer>
+        <!-- MODAL -->
+        <!-- Create Email Modal-->
+        <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                        <h5 class="modal-title font-alt text-white" id="emailModalLabel">Marketing Email Generator</h5>
+                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body border-0 p-4">
+                        <form id="emailForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Font Weight -->
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="campaignType">
+                                    <option value="leadgen" selected>Leadgen</option>
+                                    <option value="event">Event</option>
+                                </select>
+                                <input type="hidden" id="spff" />
+                                <input type="hidden" id="slff" />
+                                <label for="campaignType">Campaign Type</label>
+                            </div>
+                            <!-- SL input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="subject" type="text" placeholder="Enter subject line here..." data-sb-validations="required" />
+                                <label for="subject">Subject line</label>
+                                <div class="invalid-feedback" data-sb-feedback="subject:required">A subject line is required.</div>
+                            </div>
+                            <!-- PH input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="preheader" type="text" placeholder="Enter preheader here..." />
+                                <label for="preheader">Preheader</label>
+                            </div>
+                            <!-- CMP Code input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="campaignCode" type="text" placeholder="Enter campaign code here..." data-sb-validations="required" />
+                                <label for="campaignCode">Campaign code</label>
+                                <div class="invalid-feedback" data-sb-feedback="campaignCode:required">A campaign code is required.</div>
+                            </div>
+                            <!-- Image Banner input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="imageSrc" type="text" placeholder="Enter image banner here..." />
+                                <label for="imageSrc">Image banner</label>
+                            </div>
+                            <!-- Banner Link input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="imageUrl" type="text" placeholder="Enter banner link here..." />
+                                <label for="imageUrl">Banner link</label>
+                            </div>
+                            <!-- Email Copy input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="bodyText" type="text" placeholder="Enter email copy here..." style="height: 5rem" data-sb-validations="required"></textarea>
+                                <label for="bodyText">Email copy</label>
+                                <div class="invalid-feedback" data-sb-feedback="bodyText:required">An email copy is required.</div>
+                            </div>
+                            <!-- CTA input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="ctaText" type="text" placeholder="Enter CTA text here..." />
+                                <label for="ctaText">CTA text</label>
+                            </div>
+                            <!-- CTA Link input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="ctaLink" type="text" placeholder="Enter CTA link here..." />
+                                <label for="ctaLink">CTA link</label>
+                            </div>
+                            <!-- Signoff Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="signoff" type="text" placeholder="Enter signoff here..." />
+                                <label for="signoff">Signoff</label>
+                            </div>
+                            <!-- Signoff Title input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="signoffTitle" type="text" placeholder="Enter signoff title here..." />
+                                <label for="signoffTitle">Signoff title</label>
+                            </div>
+
+                            <!-- Submit Button-->
+                            <div class="row g-2 my-3">
+                                <div class="col-6">
+                                    <button class="btn btn-primary rounded-pill btn-lg w-100" id="submitbutton" type="submit" disabled>Generate snippet</button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" onclick="resetForm()">Reset Form</button>
+                                </div>
+                            </div>
+
+                            <!-- <div class="fw-bolder my-3">Get your code here...</div> -->
+                            <!-- Generated email output-->
+                            <div class="form-floating mb-3 my-3">
+                                <textarea class="form-control" id="outputEmail" style="height: 10rem;" readonly>Complete form to generate email...</textarea>
+                                <div class="row g-2 my-3">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-primary rounded-pill btn-lg w-100" id="copyBtn">Copy to Clipboard</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" id="downloadBtnEmail">Download HTML</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+        <!-- Modal Template -->
+
+        <div class="modal fade" id="buyUsCoffee" tabindex="-1" aria-labelledby="buyUsCoffeeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="buyUsCoffeeLabel">LEAVE A TIP, PLEASE?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img class="text-center" src="assets/qr.jpg" style="height: auto; width: 450px;"/>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="modalEmailBanner" tabindex="-1" aria-labelledby="modalEmailBannerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="modalEmailBannerLabel">Email Banner</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="bannerForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Image Banner input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="imageSrc2" type="text" placeholder="Enter image banner here..." />
+                        <label for="imageSrc2" data-sb-validations="required">Image banner</label>
+                    </div>
+                    <!-- Banner Link input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="imageUrl2" type="text" placeholder="Enter banner link here..." />
+                        <label for="imageUrl2">Banner link</label>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="row g-2 my-3">
+                        <div class="col-6">
+                            <button class="btn btn-primary rounded-pill btn-lg w-100" id="submitBanner" type="submit" disabled>Generate snippet</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" onclick="resetForm()">Reset Form</button>
+                        </div>
+                    </div>
+
+                    <!-- <div class="fw-bolder my-3">Get your code here...</div> -->
+                    <!-- Generated email output-->
+                    <div class="form-floating mb-3 my-3">
+                        <textarea class="form-control" id="outputBanner" style="height: 10rem;" readonly>Complete form to generate code...</textarea>
+                        <div class="row g-2 my-3">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary rounded-pill btn-lg w-100" id="copyBtnBanner">Copy to Clipboard</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" id="downloadBtnBanner">Download Snippet</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="modalEmailCopy" tabindex="-1" aria-labelledby="modalEmailCopyLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="modalEmailCopyLabel">Email Copy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="emailCopyForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Email Copy input-->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="bodyText2" type="text" placeholder="Enter email copy here..." style="height: 5rem" data-sb-validations="required"></textarea>
+                        <label for="bodyText2">Email copy</label>
+                        <div class="invalid-feedback" data-sb-feedback="bodyText2:required">An email copy is required.</div>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="row g-2 my-3">
+                        <div class="col-6">
+                            <button class="btn btn-primary rounded-pill btn-lg w-100" id="submitEmailCopy" type="submit" disabled>Generate snippet</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" onclick="resetForm()">Reset Form</button>
+                        </div>
+                    </div>
+
+                    <!-- Generated email output-->
+                    <div class="form-floating mb-3 my-3">
+                        <textarea class="form-control" id="outputEmailCopy" style="height: 10rem;" readonly>Complete form to generate code...</textarea>
+                        <div class="row g-2 my-3">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary rounded-pill btn-lg w-100" id="copyBtnEmailCopy">Copy to Clipboard</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" id="downloadBtnEmailCopy">Download Snippet</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="modalTestimonials" tabindex="-1" aria-labelledby="modalTestimonialsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="modalTestimonialsLabel">Testimonials</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="testimonialForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Testimonial input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="testimony" type="text" placeholder="Enter testimonial here..." />
+                        <label for="testimony" data-sb-validations="required">Testimonial</label>
+                    </div>
+                    <!-- Name/Company input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="company" type="text" placeholder="Enter name/company here..." />
+                        <label for="company">Name/Company</label>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="row g-2 my-3">
+                        <div class="col-6">
+                            <button class="btn btn-primary rounded-pill btn-lg w-100" id="submitTestimonial" type="submit" disabled>Generate snippet</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" onclick="resetForm()">Reset Form</button>
+                        </div>
+                    </div>
+
+                    <!-- Generated email output-->
+                    <div class="form-floating mb-3 my-3">
+                        <textarea class="form-control" id="outputTestimonial" style="height: 10rem;" readonly>Complete form to generate code...</textarea>
+                        <div class="row g-2 my-3">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary rounded-pill btn-lg w-100" id="copyBtnTestimonials">Copy to Clipboard</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" id="downloadBtnTestimonials">Download Snippet</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="modalCTAButton" tabindex="-1" aria-labelledby="modalCTAButtonLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="modalCTAButtonLabel">CTA Button</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="ctaForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- CTA input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="ctaText2" type="text" placeholder="Enter CTA text here..." data-sb-validations="required"/>
+                        <label for="ctaText2">CTA text</label>
+                    </div>
+                    <!-- CTA Link input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="ctaLink2" type="text" placeholder="Enter CTA link here..." data-sb-validations="required"/>
+                        <label for="ctaLink2">CTA link</label>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="row g-2 my-3">
+                        <div class="col-6">
+                            <button class="btn btn-primary rounded-pill btn-lg w-100" id="submitCTA" type="submit" disabled>Generate snippet</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" onclick="resetForm()">Reset Form</button>
+                        </div>
+                    </div>
+                    <!-- Generated email output-->
+                    <div class="form-floating mb-3 my-3">
+                        <textarea class="form-control" id="outputCTA" style="height: 10rem;" readonly>Complete form to generate code...</textarea>
+                        <div class="row g-2 my-3">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary rounded-pill btn-lg w-100" id="copyBtnCTA">Copy to Clipboard</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" id="downloadBtnCTA">Download Snippet</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="modalBulletList" tabindex="-1" aria-labelledby="modalBulletListLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="modalBulletListLabel">Bullet List</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="bulletListForm">
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="listType">
+                    <option value="bull" selected>&bull; Bullet</option>
+                    <option value="10003">&#10003; Checkmark</option>
+                    <option value="numList">123 Numbered List</option>
+                    </select>
+                    <label for="listType">List Type</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="listColor">
+                    <option value="#000000" selected>Black</option>
+                    <option value="#e8171f">LN Red</option>
+                    </select>
+                    <label for="listColor">Color</label>
+                </div>
+                <!-- Bullet input container -->
+                <div id="bulletListInputs">
+                <div class="form-floating mb-3 bullet-set">
+                    <input class="form-control" type="text" name="bullet" placeholder="Enter bullet list here…" autocomplete="off" />
+                    <label>Bullet list</label>
+                </div>
+                </div>
+
+                <!-- Clone button -->
+                <div class="text-end mb-3">
+                    <button type="button" id="addBullet" class="btn btn-secondary rounded-pill">Add Bullet</button>
+                </div>
+
+                <div class="row g-2 my-3">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-primary rounded-pill btn-lg w-100" id="submitList" disabled>Generate snippet</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" onclick="resetForm()">Reset Form</button>
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3 my-3">
+                    <textarea class="form-control" id="outputList" style="height: 10rem;" readonly>Complete form to generate code...</textarea>
+                    <div class="row g-2 my-3">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary rounded-pill btn-lg w-100" id="copyBtnList">Copy to Clipboard</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" id="downloadBtnList">Download Snippet</button>
+                    </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="modalLinkedText" tabindex="-1" aria-labelledby="modalLinkedTextLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="modalLinkedTextLabel">Linked Text</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="linkedTextForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Text input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="linkedText" type="text" placeholder="Enter text here..." data-sb-validations="required"/>
+                        <label for="linkedText">Text</label>
+                    </div>
+                    <!-- Text Link input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="textLink" type="text" placeholder="Enter link here..." data-sb-validations="required"/>
+                        <label for="textLink">Link</label>
+                    </div>
+                    <!-- Font Weight -->
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="fontWeight">
+                            <option value="bold" selected>Bold</option>
+                            <option value="normal">Normal</option>
+                        </select>
+                        <label for="fontWeight">Font Weight</label>
+                    </div>
+                    <!-- Text Decoration -->
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="textDecoration">
+                            <option value="none" selected>None</option>
+                            <option value="underline">Underlined</option>
+                        </select>
+                        <label for="textDecoration">Text Decoration</label>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="row g-2 my-3">
+                        <div class="col-6">
+                            <button class="btn btn-primary rounded-pill btn-lg w-100" id="submitLinkedText" type="submit" disabled>Generate snippet</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" onclick="resetForm()">Reset Form</button>
+                        </div>
+                    </div>
+                    <!-- Generated email output-->
+                    <div class="form-floating mb-3 my-3">
+                        <textarea class="form-control" id="outputLinkedText" style="height: 10rem;" readonly>Complete form to generate code...</textarea>
+                        <div class="row g-2 my-3">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary rounded-pill btn-lg w-100" id="copyBtnLinkedText">Copy to Clipboard</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-secondary rounded-pill btn-lg w-100" id="downloadBtnLinkedText">Download Snippet</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+        <button id="darkModeToggle" class="floating-toggle-btn" title="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Bootstrap core JS-->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/sb-forms-latest.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        
+        <!-- Dark Mode Script -->
+        <script>
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const icon = toggleBtn.querySelector('i');
+
+        function updateIcon(isDark) {
+        icon.classList.remove('fa-moon', 'fa-sun');
+        icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateIcon(isDark);
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        const isDark = savedTheme === 'dark';
+        if (isDark) document.body.classList.add('dark-mode');
+        updateIcon(isDark);
+        });
+
+        </script>
+        <!-- RESET FORMS -->
+         
+        <script>
+        function resetForm() {
+        document.getElementById("emailForm").reset();
+        document.getElementById("bannerForm").reset();
+        document.getElementById("emailCopyForm").reset();
+        document.getElementById("bulletListForm").reset();
+        document.getElementById("testimonialForm").reset();
+        document.getElementById("ctaForm").reset();
+        document.getElementById("linkedTextForm").reset();
+        }
+        </script>
+
+    </body>
+</html>
