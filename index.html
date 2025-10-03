@@ -102,6 +102,7 @@
                 </div>
             </aside>
         <!-- App features section-->
+
         <section class="masthead" id="generate">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
@@ -189,9 +190,17 @@
             <div class="cta-content">
                 <div class="container px-5">
                     <h2 class="text-white display-1 lh-1 mb-4">
-                        Coming soon...
+                        In the works
                     </h2>
                     <ul class="mb-4">
+                        <li class="text-white fw-bold mb-3">
+                          <div class="col-md-6 mb-3">
+                            <!-- Feature item with modal trigger -->
+                            <button class="btn text-start text-white p-0" data-bs-toggle="modal" data-bs-target="#modalTJAuthors">
+                              <h3 class="font-alt mb-0">Tax Journal ENewsletter | Authors</h3>
+                            </button>
+                          </div>
+                        </li>
                         <li class="text-white bold">Tolley Email Generator</li>
                         <li class="text-white bold">Two-column Layout</li>
                         <li class="text-white bold">Three-column Layout</li>
@@ -206,6 +215,28 @@
                 </div>
             </div>
         </section>
+        <!-- Call to action section-->
+<!--         <section class="cta" id="comingSoon">
+            <div class="cta-content">
+                <div class="container px-5">
+                    <h2 class="text-white display-1 lh-1 mb-4">
+                        Coming soon...
+                    </h2>
+                    <ul class="mb-4">
+                        <li class="text-white bold">Tolley Email Generator</li>
+                        <li class="text-white bold">Two-column Layout</li>
+                        <li class="text-white bold">Three-column Layout</li>
+                        <li class="text-white bold">Icon list</li>
+                    </ul>
+                                <button class="btn btn-outline-light-2 rounded-pill btn-lg w-10" data-bs-toggle="modal" data-bs-target="#buyUsCoffee">
+                                    <span class="d-flex align-items-center">
+                                        <i class="bi-chat-text-fill me-2"></i>
+                                        <span class="medium">LEAVE A TIP!</span>
+                                    </span>
+                                </button>
+                </div>
+            </div>
+        </section> -->
         <!-- Footer-->
         <footer class="bg-black text-center py-5">
             <div class="container px-5">
@@ -214,7 +245,7 @@
                 </div>
                 <div class="text-white-50 small">
                     <div class="mx-1">&copy; Marketing Email Generator 2025. All Rights Reserved.</div>
-                    <div class="mx-1">MEGv1.2</div>
+                    <div class="mx-1">MEGv1.3</div>
                 </div>
             </div>
         </footer>
@@ -339,6 +370,92 @@
             </div>
         </div>
         </div>
+        
+<!-- Tax Journal Authors Modal -->
+<div class="modal fade" id="modalTJAuthors" tabindex="-1" aria-labelledby="modalTJAuthorsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-gradient-primary-to-secondary p-4">
+        <h5 class="modal-title font-alt text-white" id="modalTJAuthorsLabel">
+          Tax Journal ENewsletter | Authors
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="tjAuthors">
+          <!-- Month Selector -->
+          <div class="form-floating mb-3">
+            <select class="form-select" id="auth-month"></select>
+            <label for="auth-month">Authors Issue Month</label>
+          </div>
+
+          <!-- Authors List Input -->
+          <div class="form-floating mb-3">
+            <textarea 
+              class="form-control" 
+              id="auth-input" 
+              placeholder="Zoe Andrews, Fabian Barth and James Hurst - Title&#10;Another Author - Another Article" 
+              style="height: 8rem;" 
+              required>
+            </textarea>
+            <label for="auth-input">Authors List</label>
+            <div class="invalid-feedback">Please enter at least one author entry.</div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="row g-2 my-3">
+            <div class="col-6">
+              <button 
+                class="btn btn-primary rounded-pill btn-lg w-100" 
+                id="auth-generate" 
+                type="button">
+                Generate Snippet
+              </button>
+            </div>
+            <div class="col-6">
+              <button 
+                type="reset" 
+                class="btn btn-secondary rounded-pill btn-lg w-100">
+                Reset Form
+              </button>
+            </div>
+          </div>
+
+          <!-- Output Area -->
+          <div class="form-floating mb-3 my-3">
+            <textarea 
+              class="form-control" 
+              id="auth-output" 
+              style="height: 12rem;" 
+              readonly>Complete form to generate code...</textarea>
+            <label for="auth-output">Generated Code</label>
+
+            <div class="row g-2 my-3">
+              <div class="col-6">
+                <button 
+                  type="button" 
+                  class="btn btn-primary rounded-pill btn-lg w-100" 
+                  id="auth-copy" 
+                  style="display:none;">
+                  Copy Code
+                </button>
+              </div>
+              <div class="col-6">
+                <button 
+                  type="button" 
+                  class="btn btn-secondary rounded-pill btn-lg w-100" 
+                  onclick="downloadSnippet()">
+                  Download Snippet
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
         <div class="modal fade" id="modalEmailBanner" tabindex="-1" aria-labelledby="modalEmailBannerLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -698,6 +815,109 @@
         document.getElementById("linkedTextForm").reset();
         }
         </script>
+        
+<script>
+  // Populate month dropdown
+  const monthSelect = document.getElementById('auth-month');
+  const months = [
+    'January','February','March','April','May','June',
+    'July','August','September','October','November','December'
+  ];
+  const now = new Date();
+  let lastMonthIndex = now.getMonth() - 1;
+  if (lastMonthIndex < 0) lastMonthIndex = 11;
+  months.forEach((m, i) => {
+    const opt = document.createElement('option');
+    opt.value = m;
+    opt.textContent = m;
+    if (i === lastMonthIndex) opt.selected = true;
+    monthSelect.appendChild(opt);
+  });
+
+  // Generate block
+  document.getElementById('auth-generate').onclick = () => {
+    const lines = document.getElementById('auth-input').value.trim().split('\n');
+    const selectedMonth = monthSelect.value;
+    let authorLines = '';
+
+    if (!lines.length || !lines[0].includes(' - ')) {
+      alert('Please enter at least one valid line in the format:\nAuthor Name - Article Title');
+      return;
+    }
+
+    lines.forEach(line => {
+      if (!line.includes(' - ')) return;
+      const [authorsPart, title] = line.split(' - ');
+
+      const rawAuthors = authorsPart
+        .replace(/\sand\s/g, ',')
+        .split(',')
+        .map(a => a.trim())
+        .filter(a => a.length > 0);
+
+      const links = rawAuthors.map(author => {
+        const slug = author
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^a-z\-]/g, '');
+        return `<a href="https://www.taxjournal.com/authors/${slug}" name="" target="_blank" style="color:#005B9E; text-decoration:none;"><strong>${author}</strong></a>`;
+      });
+
+      let formatted = '';
+      if (links.length === 1) {
+        formatted = links[0];
+      } else if (links.length === 2) {
+        formatted = `${links[0]} and ${links[1]}`;
+      } else {
+        formatted = links.slice(0, -1).join(', ') + ' and ' + links.slice(-1);
+      }
+
+      authorLines += `${formatted} - ${title}<br><br>\n\n`;
+    });
+
+    const wrapped = `
+<!-- AUTHORS START--> 
+<tr>
+  <td align="left" valign="top" style="padding:10px 0 0 0; font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size:24px; line-height:30px; text-align:left; mso-line-height-rule:exactly; color:#ACAC8C;">
+    <strong>Tax Journal authors for ${selectedMonth}</strong>
+  </td>
+</tr>
+
+<tr>
+  <td align="left" valign="top" style="padding:20px 20px 0px 0; font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size:14px; line-height:18px; text-align:left; mso-line-height-rule:exactly; color:#000000;">
+    <em>Tax Journal</em> thanks its authors for ${selectedMonth} (click on links below to view author profiles and access their contributions):<br><br>
+${authorLines.trim()}
+  </td>
+</tr>
+<!-- AUTHORS END -->
+    `.trim();
+
+    document.getElementById('auth-output').value = wrapped;
+    document.getElementById('auth-copy').style.display = 'inline-block';
+  };
+
+  // Copy functionality
+  document.getElementById('auth-copy').onclick = () => {
+    const txt = document.getElementById('auth-output').value;
+    navigator.clipboard.writeText(txt).then(() => {
+      const btn = document.getElementById('auth-copy');
+      btn.textContent = 'Copied!';
+      setTimeout(() => (btn.textContent = 'Copy Code'), 1500);
+    });
+  };
+
+  // Optional: Download functionality
+  function downloadSnippet() {
+    const code = document.getElementById('auth-output').value;
+    const blob = new Blob([code], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'tj-authors-snippet.html';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+</script>
 
     </body>
 </html>
