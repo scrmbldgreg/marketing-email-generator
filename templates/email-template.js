@@ -163,6 +163,10 @@ export function generateTemplate({
   SET @f_name = ProperCase(@fnameTemp)
   ]%%
   <!-- FirstName personalisation: END -->
+  %%[        
+        VAR @key
+        SET @key = AttributeValue("SubscriberKey")
+  ]%%
 
 </div>
 <!-- AmpScript Codes : END -->
@@ -463,24 +467,25 @@ export function generateTemplate({
               <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="600" class="email-container">
 
                <!-- Logo + socials : BEGIN -->
-               <tr>
-                <td bgcolor="#ffffff" style="padding-bottom: 0px;">
-                  <a href="https://www.lexisnexis.co.uk/" target="_blank">
-                    <img src="https://image.m.lexisnexis.co.uk/lib/fe951372746d057f71/m/1/cf209d7a-bb42-462e-ac32-ee166fa6ea98.jpg" alt="" title="" width="600" border="0" align="center" style="width: 100%; max-width: 600px; height: auto;">
-                  </a>
-                </td>
-              </tr>
+                <tr>
+                    <td bgcolor="#ffffff" style="padding-bottom: 0px;">
+                        <a href="https://www.lexisnexis.co.uk/" target="_blank">
+                            <img src="https://image.m.lexisnexis.co.uk/lib/fe951372746d057f71/m/1/0fc89892-b71f-432c-967c-356444e83543.png" alt="" title="" width="600" border="0" align="center" style="width: 100%; max-width: 600px; height: auto;">
+                        </a>
+                    </td>
+                </tr>
               <!-- Logo + socials : END -->
+
               <!-- Hero Image, Flush : BEGIN -->
               <tr>
                 <td bgcolor="#ffffff" style="padding-bottom: 0px;">
                   <div style="display:none;">
-                  %%[ SET @createbanner = "<a href='https://www.lexisnexis.co.uk/event/lexis-create-plus-demonstration.html?utm_source=email&utm_medium=email&utm_campaign=603866__all_segments__lexis_create_plus_launch&utm_term=segment_emails' target='_blank'>
-                    <img src='https://image.m.lexisnexis.co.uk/lib/fe951372746d057f71/m/1/effb01ed-564e-477a-99b8-bc6ce8477718.png' alt='' title='' width='600' border='0' align='center' style='width: 100%; max-width: 600px; height: auto;'>
-                  </a>"
-                  ]%%
-                </div>
-                %%=v(@createbanner)=%%
+                    %%[ SET @protege = "<a href='https://www.lexisnexis.co.uk/solutions/protege?utm_source=email&utm_medium=email&utm_content=_&utm_campaign=604407_protegelaunchcampaigncrosspromotionbanner' target='_blank'>
+                      <img src='https://image.m.lexisnexis.co.uk/lib/fe951372746d057f71/m/1/63da846e-465e-44ca-9335-c0b192d4ffba.jpg' alt='' title='' width='600' border='0' align='center' style='width: 100%; max-width: 600px; height: auto;'>
+                    </a>"
+                    ]%%
+                  </div>
+                  %%=v(@protege)=%%
                 </td>
               </tr>
               <!-- Hero Image, Flush : END -->
@@ -578,7 +583,9 @@ export function generateTemplate({
       <br /><br />
       PLEASE DO NOT REPLY TO THIS EMAIL. 
       <br /><br />
-      <a href="https://www.lexisnexis.co.uk/about-us/about-us" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">About LexisNexis</a> | <a href="https://www.lexisnexis.co.uk/terms" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">Terms & Conditions</a> | <a href="mailto:%%=v(@spff)=%%?subject=%%=v(@slff)=%%" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">Contact Us</a> | <a href="https://www.lexisnexis.com/global/privacy/privacy-policy.page" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">Privacy Policy</a> | <a href="https://stayintouch.lexisnexis.co.uk/" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">Manage your preferences or unsubscribe</a>
+      <a href="https://www.lexisnexis.co.uk/about-us/about-us" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">About LexisNexis</a> | <a href="https://www.lexisnexis.co.uk/terms" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">Terms & Conditions</a> | <a href="mailto:%%=v(@spff)=%%?subject=%%=v(@slff)=%%" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">Contact Us</a> | <a href="https://www.lexisnexis.com/global/privacy/privacy-policy.page" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">Privacy Policy</a> | <a href="https://stayintouch.lexisnexis.co.uk/" style="color: #040404; text-decoration: underline; font-weight: normal;" target="_blank">Manage communication preferences</a>
+      <br/>      
+      <a href="%%=RedirectTo(CloudPagesURL(9097))=%%" name="Opt-out" target="_blank" style="color: #040404; text-decoration: underline; font-weight: normal;">Unsubscribe</a>
       <br /><br />
       RELX (UK) Limited, trading as LexisNexis<sup>&reg;</sup>. Registered office 1-3 Strand London WC2N 5JR. Registered in England number 2746621. VAT Registered No. GB 730 8595 20. LexisNexis and the Knowledge Burst logo are registered trademarks of RELX Inc. &copy; %%=FormatDate(Now(), "YYYY")=%% LexisNexis. The information in this email is current as of %%=FormatDate(Now(), "MMMM YYYY")=%% and is subject to change without&nbsp;notice.
     </td>
